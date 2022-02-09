@@ -9,7 +9,6 @@ const galleryMarkup = createGalleryItems(galleryItems);
 galleryConteiner.insertAdjacentHTML('beforeend', galleryMarkup);
 
 galleryConteiner.addEventListener('click', onGalleryConteinerClick);
-// Создание и рендер разметки по массиву данных galleryItems и предоставленному шаблону элемента галереи.
 
 function createGalleryItems(galleryItems) {
     return galleryItems.map(({ preview, original, description }) => {
@@ -32,8 +31,7 @@ function onGalleryConteinerClick(e) {
     if (e.target.nodeName !== 'IMG') {
     return;
     }
-    modalShow(e.target.dataset.source);
-    
+    modalShow(e.target.dataset.source);    
 }
 
 function modalShow(src) {
